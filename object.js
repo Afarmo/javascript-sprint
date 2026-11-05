@@ -1,1 +1,1 @@
-const Person = {isMarried: false, age: 20, middleName: undefined, firstName: "Bobby"}
+const person = {isMarried: false, age: 20, middleName: undefined, firstName: "Bobby"}
