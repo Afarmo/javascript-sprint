@@ -4,14 +4,14 @@ const mathObj = {
   },
 
   isEven(value) {
-    return Math.isEven(value);
+    return value % 2 === 0;
   },
 
   isOdd(value) {
-    return Math.isOdd(value);
+    return value % 2 !== 0;
   },
   isStrictlyPositive(value) {
-    return Math.isStrictlyPostive(value);
+    return value > 0;
   },
 
   min(a, b) {
