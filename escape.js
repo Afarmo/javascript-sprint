@@ -1,0 +1,1 @@
+console.log('Hello, \nThis is a test for special charachters: \\, \", \', \t, \n')
