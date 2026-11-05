@@ -1,2 +1,2 @@
 let large = Number.MAX_VALUE
-const little = 0
+const little = Number.MIN_VALUE
