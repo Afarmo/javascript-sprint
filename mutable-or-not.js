@@ -1,2 +1,2 @@
-const cartTotal = 123
-let taxRate = 123
+let cartTotal = 123
+const taxRate = 123
