@@ -10,7 +10,7 @@ const mathObj = {
   isOdd(value) {
     return Math.isOdd(value);
   },
-  isStrictlyPostive(value) {
+  isStrictlyPositive(value) {
     return Math.isStrictlyPostive(value);
   },
 
