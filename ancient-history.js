@@ -3,11 +3,11 @@ function classifyDate(dateObject) {
   const lastYear = new Date(now);
   const nextYear = new Date(now);
 
-  if (dateObject.getTime() > nextYear.setFullyear(now.getFullYear() + 1)) {
+  if (dateObject.getTime() > nextYear.setFullYear(now.getFullYear() + 1)) {
     return "distant future";
   }
 
-  if (dateObject.getTime() < lastYear.setFullyear(now.getFullYear() - 1)) {
+  if (dateObject.getTime() < lastYear.setFullYear(now.getFullYear() - 1)) {
     return "ancient";
   }
 
@@ -15,7 +15,5 @@ function classifyDate(dateObject) {
     return "future";
   }
 
-  if (dateObject.getTime() < now) {
-    return "past";
-  }
+  return "past";
 }
