@@ -1,23 +1,18 @@
 function classifyDate(dateObject) {
-  if (
-    dateObject.getTime() > Date.now() &&
-    dateObject.getTime() <= Date.now() + 1000 * 60 * 60 * 365
-  ) {
-    return "future";
+  const now = new Date.now();
+  if (dateObject.getTime() > now.setFullyear() + 1) {
+    return "distant future";
   }
 
-  if (
-    dateObject.getTime() <= Date.now() &&
-    dateObject.getTime() >= Date.now() - 1000 * 60 * 60 * 365
-  ) {
+  if (dateObject.getTime() > now.setFullyear() - 1) {
     return "past";
   }
 
-  if (dateObject.getTime() < Date.now()) {
-    return "ancient";
+  if (dateObject.getTime() < now) {
+    return "past";
   }
 
-  if (dateObject.getTime() > Date.now()) {
-    return "distant future";
+  if (dateObject.getTime() > now) {
+    return "future";
   }
 }
