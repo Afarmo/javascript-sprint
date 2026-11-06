@@ -1,14 +1,14 @@
 function classifyDate(dateObject) {
   if (
     dateObject.getTime() > Date.now() &&
-    dateObject.getTime() < Date.now() + 1000 * 60 * 60
+    dateObject.getTime() <= Date.now() + 1000 * 60 * 60
   ) {
     return "future";
   }
 
   if (
-    dateObject.getTime() < Date.now() &&
-    dateObject.getTime() > Date.now() - 1000 * 60 * 60
+    dateObject.getTime() <= Date.now() &&
+    dateObject.getTime() >= Date.now() - 1000 * 60 * 60
   ) {
     return "past";
   }
