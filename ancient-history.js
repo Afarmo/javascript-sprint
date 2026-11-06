@@ -1,13 +1,13 @@
-function classifyDate(Date) {
-  if (Date.getTime() < Date.now() - 1000 * 60 * 60) {
+function classifyDate(dateObject) {
+  if (dateObject.getTime() < Date.now() - 1000 * 60 * 60) {
     return "ancient";
   }
 
-  if (Date.getTime() > Date.now() + 1000 * 60 * 60) {
+  if (dateObject.getTime() > Date.now() + 1000 * 60 * 60) {
     return "distant future";
   }
 
-  if (Date.getTime() > Date.now()) {
+  if (dateObject.getTime() > Date.now()) {
     return "future";
   } else {
     return "past";
