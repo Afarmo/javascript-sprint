@@ -1,5 +1,5 @@
 function classifyDate(dateObject) {
-  const now = new Date.now();
+  const now = Date.now();
   if (dateObject.getTime() > now.setFullyear() + 1) {
     return "distant future";
   }
