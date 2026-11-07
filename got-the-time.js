@@ -16,5 +16,5 @@ function printPrettyDate(dateObject) {
   const date = dateObject.toLocaleDateString("en-US", dateOptions);
   const time = dateObject.toLocaleTimeString("en-US", timeOptions);
 
-  console.log(`Today is ${date}, and the time is ${time}`);
+  console.log(`Today is ${date}, and the time is ${time}.`);
 }
