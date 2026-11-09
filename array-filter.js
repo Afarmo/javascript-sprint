@@ -13,9 +13,10 @@ function compoundFilter(products) {
   result = products.filter(
     (product) => product.category.indexOf("special") !== -1,
   );
-  result = products.filter((product) => product.price > 50);
-  result = products.filter((product) => product.price > 50);
-  result = products.filter((product) => product.location !== "Underground");
+  //   result = products.filter((product) => product.price > 50);
+  result = products.filter(
+    (product) => product.location !== "Underground" && product.price > 50,
+  );
   return result;
 }
 
