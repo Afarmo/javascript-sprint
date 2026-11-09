@@ -4,6 +4,8 @@ function calculateFines(JSONarray) {
     totalFines: 0,
     cars: [],
   };
+  var brand = "";
+  var model = "";
 
   for ([brand, model, reg, year, fuel] of obj) {
     brand = model;
