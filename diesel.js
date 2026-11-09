@@ -16,5 +16,5 @@ function calculateFines(JSONarray) {
     }
     cars.push({ reg: reg, year: year, fuel: fuel, fine: fine });
   }
-  return result;
+  return JSON.stringify(result);
 }
