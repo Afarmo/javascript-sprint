@@ -18,6 +18,7 @@ function calculateFines(JSONarray) {
   }
   return JSON.stringify(result);
 }
+
 const carData =
   '[["Toyota", "Camry", "ABC123", 2014, "diesel"], ["Ford", "Focus", "XYZ456", 1999, "petrol"]]';
 console.log(calculateFines(carData));
