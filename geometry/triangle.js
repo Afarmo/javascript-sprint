@@ -10,6 +10,7 @@ class Triangle {
       s * (s - this.sideA) * (s - this.sideB) * (s - this.sideC),
     );
   }
+
   perimeter() {
     return this.sideA + this.sideB + this.sideC;
   }
