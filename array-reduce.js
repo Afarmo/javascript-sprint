@@ -1,8 +1,4 @@
 function getTotalFromShoppingBasket(basket) {
-  // for (let property in basket) {
-  //   result += property[price];
-  // }
-
   const result = basket.reduce(
     (accumulator, currentVal) => accumulator + currentVal.price,
     0,
@@ -11,26 +7,21 @@ function getTotalFromShoppingBasket(basket) {
   return result;
 }
 function getAverageAge(people) {
-  const result = people.reduce(
+  let result = people.reduce(
     (accumulator, currentVal) => accumulator + currentVal.age,
     0,
   );
-  return result / people.length;
+
+  if (result !== 0) {
+    result = result / people.length;
+  }
+  return result;
 }
 
 function concatenateObjects(objects) {
   let result = {};
-  // for (let [key, value] in objects) {
-  //   if (result.hasOwnProperty[key]) {
-  //     result[key].push(value);
-  //   } else {
-  //     result[key] = value;
-  //   }
-  // }
   for (let property of objects) {
     if (result.hasOwnProperty([property.key])) {
-      console.log("here");
-
       result[property.key].push(property.value);
     } else {
       result[property.key] = [property.value];
