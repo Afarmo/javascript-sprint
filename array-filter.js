@@ -9,14 +9,14 @@ function filterObjectsByNameLength(array, len) {
 }
 
 function compoundFilter(products) {
-  let result = products.filter((product) => product.code.length > 5);
-  result = products.filter(
-    (product) => product.category.indexOf("special") !== -1,
+  let result = products.filter(
+    (product) =>
+      product.code.length > 5 &&
+      product.location !== "Underground" &&
+      product.price > 50 &&
+      product.category.includes("special") !== true,
   );
-  //   result = products.filter((product) => product.price > 50);
-  result = products.filter(
-    (product) => product.location !== "Underground" && product.price > 50,
-  );
+
   return result;
 }
 
@@ -44,6 +44,12 @@ const products = [
     category: "accessories",
     price: 90,
     location: "Street",
+  },
+  {
+    code: "PQR789",
+    category: "special items",
+    price: 60,
+    location: "he",
   },
 ];
 
