@@ -1,3 +1,6 @@
+export class Triangle {}
+export const triangle = new Triangle(3, 4, 5);
+
 class Triangle {
   constructor(sideA, sideB, sideC) {
     this.sideA = sideA;
@@ -15,8 +18,3 @@ class Triangle {
     return this.sideA + this.sideB + this.sideC;
   }
 }
-
-const triangle = new Triangle(3, 4, 5);
-
-console.log(triangle.area());
-console.log(triangle.perimeter());

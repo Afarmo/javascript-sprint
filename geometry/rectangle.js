@@ -1,3 +1,6 @@
+export class Rectangle {}
+export const rectangle = new Rectangle(5, 3);
+
 class Rectangle {
   constructor(width, height) {
     this.width = width;
@@ -10,5 +13,3 @@ class Rectangle {
     return 2 * this.width + 2 * this.height;
   }
 }
-
-const rectangle = new Rectangle(5, 3);
