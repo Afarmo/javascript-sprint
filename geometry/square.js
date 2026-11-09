@@ -1,8 +1,8 @@
-export class Square {}
-export const rectangle = new Rectangle(5, 3);
-export const square = new Square(4);
+export { Square, rectangle, square };
 
-import class Rectangle {}
+// export class Square {}
+
+import { Rectangle } from "./rectangle.js";
 
 class Square extends Rectangle {
   constructor(side) {
@@ -10,3 +10,5 @@ class Square extends Rectangle {
   }
 }
 
+const rectangle = new Rectangle(5, 3);
+const square = new Square(4);
