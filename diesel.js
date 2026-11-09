@@ -5,7 +5,7 @@ function calculateFines(JSONarray) {
     cars: [],
   };
 
-  for ([undefined, undefined, reg, year, fuel] of obj) {
+  for ([brand, model, reg, year, fuel] of obj) {
     let fine = 0;
     if (year < 2000) {
       fine = 20;
