@@ -14,13 +14,13 @@ function convertArrayOfObjectsToStrings(array) {
 function objToStr(obj) {
   let result = "";
   for (const property in obj) {
-    result += `${property}: ${obj[property]}, `;
+    result += `${property.charAt(0).toUpperCase() + property.slice(1)}: ${obj[property]}, `;
   }
   return result.slice(0, result.length - 2);
 }
 
 function concatenateStrings(array, len) {
-  return array.map((x) => concatStr(x));
+  return array.map((x) => concatStr(x, len));
 }
 
 function concatStr(s, len) {
@@ -35,8 +35,8 @@ const objects = [
   { name: "Alice", age: 30, city: "New York" },
   { name: "Bob", age: 25, city: "Los Angeles" },
 ];
-
+const strings = ["apple", "banana", "kiwi", "orange", "pineapple"];
 console.log(objToStr(objects[0]));
 console.log(convertArrayOfObjectsToStrings(objects));
 
-console.log(concatStr("applea", 5));
+console.log(concatenateStrings(strings, 5));
