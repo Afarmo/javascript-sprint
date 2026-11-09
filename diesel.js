@@ -5,7 +5,7 @@ function calculateFines(JSONarray) {
     cars: [],
   };
 
-  for ([_, _, reg, year, fuel] in obj) {
+  for ([_, _, reg, year, fuel] of obj) {
     let fine = 0;
     if (year < 2000) {
       fine = 20;
@@ -14,7 +14,10 @@ function calculateFines(JSONarray) {
       result.totalFines += 10;
       fine = 10;
     }
-    cars.push({ reg: reg, year: year, fuel: fuel, fine: fine });
+    result.cars.push({ reg: reg, year: year, fuel: fuel, fine: fine });
   }
   return JSON.stringify(result);
 }
+const carData =
+  '[["Toyota", "Camry", "ABC123", 2014, "diesel"], ["Ford", "Focus", "XYZ456", 1999, "petrol"]]';
+console.log(calculateFines(carData));
