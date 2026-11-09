@@ -6,9 +6,11 @@ function calculateFines(JSONarray) {
   };
   var brand = "";
   var model = "";
+  var reg = "";
+  var year = "";
+  var fuel = "";
 
   for ([brand, model, reg, year, fuel] of obj) {
-    brand = model;
     let fine = 0;
     if (year < 2000) {
       fine = 20;
