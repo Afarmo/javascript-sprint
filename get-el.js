@@ -12,7 +12,7 @@ function getElementById(classID) {
 
 function getElementsByAttribute(attrName, attrValue) {
   if (attrValue !== "") {
-    return document.querySelectorAll(`[${attrName}="${attrValue}"]`);
+    return document.querySelectorAll(`[${attrName}=${attrValue}]`);
   }
   return document.querySelectorAll(`[${attrName}]`);
 }
