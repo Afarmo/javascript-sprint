@@ -11,8 +11,8 @@ function getElementById(classID) {
 }
 
 function getElementsByAttribute(attrName, attrValue) {
-  if (attrValue !== "") {
-    return document.querySelectorAll(`[${attrName}=${attrValue}]`);
+  if (attrValue === undefined) {
+    return document.querySelectorAll(`[${attrName}]`);
   }
-  return document.querySelectorAll(`[${attrName}]`);
+  return document.querySelectorAll(`[${attrName}="${attrValue}"]`);
 }
