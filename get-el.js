@@ -9,3 +9,10 @@ function getElementsByClassName(className) {
 function getElementById(classID) {
   return document.getElementById(classID);
 }
+
+function getElementsByAttribute(attrName, attrValue) {
+  if (attrValue !== "") {
+    return document.querySelectorAll(`[${attrName}="${attrValue}"]`);
+  }
+  return document.querySelectorAll(`[${attrName}]`);
+}
