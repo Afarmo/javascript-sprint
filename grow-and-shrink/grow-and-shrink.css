@@ -1,0 +1,39 @@
+body {
+  font-family: "Verdana";
+  background-color: grey;
+}
+
+.letter-container {
+  margin-top: 25px;
+
+  display: grid;
+  font-size: 14px;
+  grid-template-columns: repeat(26, 1fr);
+}
+
+.letter {
+  text-align: center;
+  background-color: black;
+  color: greenyellow;
+  border-style: groove;
+  border-width: 1px;
+  border-color: white;
+}
+
+.selected {
+  color: turquoise;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  justify-content: center;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: black;
+  color: greenyellow;
+  border-style: none;
+}
