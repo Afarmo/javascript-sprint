@@ -1,0 +1,30 @@
+body {
+  font-family: "Verdana";
+  font-size: 20px;
+  background-color: grey;
+}
+
+#content {
+  margin-left: 20px;
+  width: 50px;
+}
+
+button {
+  background-color: black;
+  color: white;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.highlight {
+  background-color: yellow;
+}
