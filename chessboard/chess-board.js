@@ -1,5 +1,8 @@
 function initializeChessboard() {
-  const chessboard = document.querySelector(".chessboard");
+  const chessboard = document.createElement("div");
+  chessboard.classList.add("chessboard");
+  const body = document.body;
+  body.append(chessboard);
   let row = 0;
   for (let i = 0; i < 64; i++) {
     if (i % 8 === 0) {
