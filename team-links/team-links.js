@@ -23,14 +23,18 @@ function createLinks(JSONarray) {
 
   //   --- Copy link to clipboard ---
   unorderedList.addEventListener("click", (event) => {
-    if (event.target.tagName === "SPAN") {
+    console.log(event.target.innerText);
+    if (
+      event.target.tagName === "SPAN" &&
+      event.target.innerText === "[copy]"
+    ) {
       const url = event.target.parentNode.childNodes[0].href;
       navigator.clipboard.writeText(url);
     }
   });
 
   //   --- Bolden when hovering over the links ---
-  document.addEventListener("mouseover", (event) => {
+  https: document.addEventListener("mouseover", (event) => {
     if (event.target.tagName === "LI") {
       event.target.childNodes[0].style.fontWeight = "bold";
     }
