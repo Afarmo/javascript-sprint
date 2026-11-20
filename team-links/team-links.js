@@ -22,9 +22,8 @@ function createLinks(JSONarray) {
 
   //   --- Copy link to clipboard ---
   unorderedList.addEventListener("click", (event) => {
-    if (event.target.localName === "span") {
+    if (event.target.tagName === "SPAN") {
       const url = event.target.parentNode.childNodes[0].href;
-      console.log(url);
       navigator.clipboard.writeText(url);
     }
   });
