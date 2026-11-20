@@ -30,13 +30,13 @@ function createLinks(JSONarray) {
 
   //   --- Bolden when hovering over the links ---
   document.addEventListener("mouseover", (event) => {
-    if (event.target.tagName === "A") {
+    if (event.target.tagName === "LI") {
       event.target.style.fontWeight = "bold";
     }
   });
 
   document.addEventListener("mouseout", (event) => {
-    if (event.target.tagName === "A") {
+    if (event.target.tagName === "LI") {
       event.target.style.fontWeight = "";
     }
   });
