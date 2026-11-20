@@ -31,20 +31,20 @@ function createLinks(JSONarray) {
 
   body.append(unorderedList);
 
-  //   --- Copy link to clipboard ---
+    --- Copy link to clipboard ---
 
-  //   --- Bolden when hovering over the links ---
-  //   document.addEventListener("mouseover", (event) => {
-  //     if (event.target.tagName === "LI") {
-  //       event.target.childNodes[0].style.fontWeight = "bold";
-  //     }
-  //   });
+    --- Bolden when hovering over the links ---
+    document.addEventListener("mouseover", (event) => {
+      if (event.target.tagName === "LI") {
+        event.target.childNodes[0].style.fontWeight = "bold";
+      }
+    });
 
-  //   document.addEventListener("mouseout", (event) => {
-  //     if (event.target.tagName === "LI") {
-  //       event.target.childNodes[0].style.fontWeight = "";
-  //     }
-  //   });
+    document.addEventListener("mouseout", (event) => {
+      if (event.target.tagName === "LI") {
+        event.target.childNodes[0].style.fontWeight = "";
+      }
+    });
 }
 
 const JSONarray = [
