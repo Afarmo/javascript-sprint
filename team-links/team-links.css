@@ -17,6 +17,10 @@ li {
   padding: 5px;
 }
 
+li:hover {
+  font-weight: bold;
+}
+
 li span {
   margin-left: auto;
   margin-right: 10px;

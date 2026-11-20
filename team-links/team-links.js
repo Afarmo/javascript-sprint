@@ -1,9 +1,13 @@
 function createLinks(JSONarray) {
   const body = document.body;
   const unorderedList = document.createElement("ul");
-  unorderedList.classList.add("team-links");
-  unorderedList.id = "team-list-nav";
 
+  unorderedList.classList.add("team-links");
+  const exists = document.getElementById("team-list-nav");
+  if (exists) {
+    exists.remove();
+  }
+  unorderedList.id = "team-list-nav";
   //   --- Initialize HTML structure ---
   for (let obj of JSONarray) {
     const list = document.createElement("li");
@@ -16,6 +20,10 @@ function createLinks(JSONarray) {
 
     const span = document.createElement("span");
     span.textContent = "[copy]";
+    span.addEventListener("click", () => {
+      const url = obj.url;
+      navigator.clipboard.writeText(url);
+    });
 
     list.append(anchor, span);
     unorderedList.append(list);
@@ -24,28 +32,19 @@ function createLinks(JSONarray) {
   body.append(unorderedList);
 
   //   --- Copy link to clipboard ---
-  document.addEventListener("click", (event) => {
-    if (
-      event.target.tagName === "SPAN" &&
-      event.target.innerText === "[copy]"
-    ) {
-      const url = event.target.parentNode.childNodes[0].href;
-      navigator.clipboard.writeText(url);
-    }
-  });
 
   //   --- Bolden when hovering over the links ---
-  document.addEventListener("mouseover", (event) => {
-    if (event.target.tagName === "LI") {
-      event.target.childNodes[0].style.fontWeight = "bold";
-    }
-  });
+  //   document.addEventListener("mouseover", (event) => {
+  //     if (event.target.tagName === "LI") {
+  //       event.target.childNodes[0].style.fontWeight = "bold";
+  //     }
+  //   });
 
-  document.addEventListener("mouseout", (event) => {
-    if (event.target.tagName === "LI") {
-      event.target.childNodes[0].style.fontWeight = "";
-    }
-  });
+  //   document.addEventListener("mouseout", (event) => {
+  //     if (event.target.tagName === "LI") {
+  //       event.target.childNodes[0].style.fontWeight = "";
+  //     }
+  //   });
 }
 
 const JSONarray = [
