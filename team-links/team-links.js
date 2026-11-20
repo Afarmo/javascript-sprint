@@ -3,8 +3,8 @@ function createLinks(JSONarray) {
   const unorderedList = document.createElement("ul");
   unorderedList.classList.add("team-links");
   unorderedList.id = "team-list-nav";
-  body.append(unorderedList);
 
+  //   --- Initialize HTML structure ---
   for (let obj of JSONarray) {
     const list = document.createElement("li");
     list.style.backgroundColor = obj.primary;
@@ -20,10 +20,11 @@ function createLinks(JSONarray) {
     list.append(anchor, span);
     unorderedList.append(list);
   }
+  body.append(unorderedList);
 
   //   --- Copy link to clipboard ---
-  unorderedList.addEventListener("click", (event) => {
-    console.log(event.target.innerText);
+
+  document.addEventListener("click", (event) => {
     if (
       event.target.tagName === "SPAN" &&
       event.target.innerText === "[copy]"
@@ -34,7 +35,7 @@ function createLinks(JSONarray) {
   });
 
   //   --- Bolden when hovering over the links ---
-  https: document.addEventListener("mouseover", (event) => {
+  document.addEventListener("mouseover", (event) => {
     if (event.target.tagName === "LI") {
       event.target.childNodes[0].style.fontWeight = "bold";
     }
