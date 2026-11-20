@@ -16,6 +16,7 @@ function createLinks(JSONarray) {
 
     const span = document.createElement("span");
     span.textContent = "[copy]";
+
     list.append(anchor, span);
     unorderedList.append(list);
   }
