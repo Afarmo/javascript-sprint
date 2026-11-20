@@ -36,12 +36,14 @@ function createLinks(JSONarray) {
     if (event.target.tagName === "LI") {
       event.target.childNodes[0].style.fontWeight = "bold";
     }
+    return;
   });
 
   document.addEventListener("mouseout", (event) => {
     if (event.target.tagName === "LI") {
       event.target.childNodes[0].style.fontWeight = "";
     }
+    return;
   });
 }
 
