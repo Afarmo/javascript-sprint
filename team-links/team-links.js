@@ -1,7 +1,7 @@
 function createLinks(JSONarray) {
   const body = document.body;
   const unorderedList = document.createElement("ul");
-  unorderedList.classList.replace("team-links", "team-links");
+  unorderedList.classList.add("team-links");
   unorderedList.id = "team-list-nav";
 
   //   --- Initialize HTML structure ---
@@ -20,10 +20,10 @@ function createLinks(JSONarray) {
     list.append(anchor, span);
     unorderedList.append(list);
   }
+
   body.append(unorderedList);
 
   //   --- Copy link to clipboard ---
-
   document.addEventListener("click", (event) => {
     if (
       event.target.tagName === "SPAN" &&
