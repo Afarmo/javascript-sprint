@@ -1,0 +1,31 @@
+:root {
+  --orange: orange;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  background-color: grey;
+  display: flex;
+  height: 100vh;
+}
+
+.zone {
+  flex: 1;
+}
+
+.outside {
+  background-color: seagreen;
+}
+
+.inside {
+  background-color: firebrick;
+}
+
+.character {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  background-color: white;
+}
